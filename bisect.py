@@ -3,10 +3,10 @@
 
 # defining the function we are trying to find the roots for
 def f(x):
-	return x**2 - 2
+	return x**6 - x - 1
 
 # bisect algorithm implementation
-def bisect(a, b, tolerance):
+def bisect_method(a, b, tolerance):
 
 	c = (a + b) / 2
 	while (b - a) / 2 > tolerance:
@@ -21,5 +21,5 @@ def bisect(a, b, tolerance):
 		
 	return c	
 
-root = bisect(-100, 100, 0.0003)
+root = bisect_method(1, 2, 0.00005)
 print(root)
